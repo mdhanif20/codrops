@@ -3,6 +3,10 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { makeStyles } from '@material-ui/core';
 import Button from '@mui/material/Button';
+import img from "../../../Images/Github_Icon.png";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import maryimg from "../../../Images/mary.jpeg";
 
 const useStyle = makeStyles({
     firstImage:{
@@ -31,6 +35,69 @@ const useStyle = makeStyles({
         "&:hover":{
             color:"black"
         }
+    },
+    github:{
+        display: "flex",
+        alignItems: "center",
+        background: "#F8F8F8",
+        padding: "14px 0px",
+        margin:"0px 0px 20px 0px"
+    },
+    gitLink:{
+        textDecoration:"none",
+        color: "#334BF7",
+        fontSize: "1.2rem",
+        fontWeight:"700",
+        "&:hover":{
+            color:"black"
+        }
+    },
+    designArea:{
+        borderTop: "1px solid #f1f1f1",
+        borderBottom: "1px solid #f1f1f1",
+        
+        display:"flex",
+        justifyContent:"space-between",
+        padding: "32px 0px",
+        margin: "40px 0px"
+    },
+    designLink:{
+        color:"#334BF7",
+        cursor:"pointer",
+        "&:hover":{
+            color:"black"
+        }
+    },
+    tagged:{
+        color:"#334BF7",
+        marginLeft:"10px",
+        cursor:"pointer",
+        textDecoration:"none",
+        "&:hover":{
+            color:"black"
+        }
+    },
+    maryDetails:{
+        display:"flex",
+        padding:"40px",
+        background:"#F1F1F1",
+        margin:"60px 0px"
+    },
+    maryDetailsLink:{
+        textDecoration: "none",
+        fontSize: "1rem",
+        fontWeight: 600,
+        "&:hover":{
+            color:"#334BF7"
+        }
+    },
+    marySocialIcon:{
+        color:"black",
+        textDecoration: "none",
+        marginRight:"10px",
+        "&:hover":{
+            color:"#334BF7"
+        }
     }
 })
 
@@ -47,7 +114,11 @@ const ScrollAnimation = () => {
             <Typography sx={{fontSize:"1.2rem",opacity:".6",my:2}} variant="subtitle2" gutterBottom component="div">
             By Mary Lou in Playground on December 21, 2021
             </Typography>
-            <img className={classes.firstImage} src="https://i.ibb.co/jJmpS90/columscroll-feat.jpg" alt="" />
+
+            <a href="#">
+            <img className={classes.firstImage} src="https://i.ibb.co/jJmpS90/columscroll-feat.jpg" alt="" /> 
+            </a>
+            
             <Box sx={{textAlign:"center",my:7,display:{xs:"none",md:"block"}}}>
              <Button className={classes.Button} variant="contained">View demo</Button>
              <Button className={classes.Button} variant="contained">Download Source</Button>
@@ -79,9 +150,79 @@ const ScrollAnimation = () => {
                 And this is how all the motion flow looks like:
                  <br /> <br />
                  <video style={{width:"100%"}} autoplay controls loop src="https://i7x7p5b7.stackpathcdn.com/codrops/wp-content/uploads/2021/12/columns1_opt.mp4"></video>
-              
-                
+                <br /> <br />
+                 Please be aware that this experiment is mostly a mockup (no “real” thumbnail navigation for this one)!
+                <br /> <br />
+                I really hope you find this inspirational! Thank you for checking by!
                 </Typography>
+                <Box className={classes.github}>
+                    <Box sx={{mx:4}}>
+                        <img src={`${img}`} alt="" />
+                    </Box>
+                    <Box>
+    
+                        <a className={classes.gitLink} href="https://github.com/codrops/ColumnScroll/"> Find this project on Github</a>
+                       
+                    </Box>
+                </Box>
+            </Box>
+            <Box className={classes.designArea}>
+                <Box className={classes.designLink} sx={{display:{md:"flex",xs:"none"}}}>
+                    <Box>
+                      <ArrowBackIcon/>
+                    </Box>
+                    <Box sx={{pl:2}}>
+                    8 Design Tips to Make Your Blog or Shop Stand <br /> Out
+                    </Box>
+                   
+                </Box>
+                <Box className={classes.designLink}>
+                   <Box sx={{display:{md:"flex",xs:"none"}}}>
+                       <Box sx={{pr:2}}>Three.js Animation with K-d (Christmas) Tree <br />
+                       <Box style={{margin:"0px",textAlign:"end"}}>Algorithm </Box> </Box>
+                       <Box> <ArrowForwardIcon/></Box>
+                   </Box>
+
+                </Box>
+                <Box sx={{display:{md:"none",xs:"flex"}}}>
+                    <Box><ArrowBackIcon/></Box>
+                    <Box><ArrowForwardIcon/></Box>
+                </Box>
+            </Box>
+            <Box>
+                <span>Tagged With : </span>
+                <span> <a href="#"  className={classes.tagged}>column</a> </span>
+                <span > <a href="#" className={classes.tagged}>image grid</a>  </span>
+                <span > <a href="#" className={classes.tagged}>Iocomotive scroll</a>  </span>
+                <span > <a href="#" className={classes.tagged}>preview </a>  </span>
+                <span > <a href="#" className={classes.tagged}>smooth scrolling</a>  </span>
+                <span > <a href="#" className={classes.tagged}>thumbnails </a>  </span>
+               
+            </Box>
+
+            <Box sx={{display:{md:"flex",xs:"block"},
+                    padding:"40px",
+                    background:"#F1F1F1",
+                    margin:"60px 0px"}}>
+                <Box>
+                    <img style={{borderRadius:"50%"}} src={`${maryimg}`} alt="" />
+                </Box>
+                <Box sx={{ml:{md:5,xs:0},mt:{md:0,xs:4}}}>
+                 <a className={classes.maryDetailsLink} href="#">
+                     <span style={{fontSize:"1.4rem"}}>Mary Lou</span>
+                     </a>
+                 <Typography sx={{my:3,fontSize:"1.1rem"}} variant="body1" gutterBottom>
+                 ML is a freelance web designer and developer with a passion for interaction design. She studied Cognitive Science and Computational Logic and has a weakness for the smell of freshly ground peppercorns.
+                </Typography>
+                <a className={classes.maryDetailsLink} href="#">http://www.codrops.com</a>
+                <Box sx={{mt:5}}>
+                <span> <a href="#"  className={classes.marySocialIcon}>Twitter</a> </span>
+                <span> <a href="#"  className={classes.marySocialIcon}>Dribble</a> </span>
+                <span> <a href="#"  className={classes.marySocialIcon}>Instagram</a> </span>
+                <span> <a href="#"  className={classes.marySocialIcon}>Github</a> </span>
+                
+                </Box>
+                </Box>
             </Box>
         </Box>
     );
