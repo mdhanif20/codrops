@@ -329,7 +329,7 @@ const ScrollAnimation = () => {
                 </Box>
             </Box>
             <Box sx={{display:"flex",my:5}}>
-                <Box sx={{width:{md:"53%",xs:"100%"},background:"#f1f1f1",px:{md:4,xs:4},py:{md:7,xs:4},mr:5}}>
+                <Box sx={{width:{md:"53%",xs:"100%"},background:"#f1f1f1",px:{md:4,xs:4},py:{md:7,xs:4},mr:{md:5,xs:0}}}>
                     <Typography variant="h6" gutterBottom component="div">
                     Subscribe to Codrops
                     </Typography>
