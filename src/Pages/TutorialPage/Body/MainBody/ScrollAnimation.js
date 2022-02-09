@@ -7,6 +7,10 @@ import img from "../../../Images/Github_Icon.png";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import maryimg from "../../../Images/mary.jpeg";
+import serviceOne from "../../../Images/service1.jpg";
+import serviceTwo from "../../../Images/service2.jpg";
+import serviceThree from "../../../Images/service3.jpg";
+
 
 const useStyle = makeStyles({
     firstImage:{
@@ -98,6 +102,30 @@ const useStyle = makeStyles({
         "&:hover":{
             color:"#334BF7"
         }
+    },
+    serviceLink:{
+        textDecoration:"none",
+        color:"black",
+        fontWeight:700,
+        "&:hover":{
+            color:"#334BF7"
+        }
+    },
+    input:{
+        fontSize: "1.3rem",
+        border: "0px",
+        padding: "13px 10px",
+        background: "#ffffff"
+    },
+    button:{
+        background: "black",
+        color: "#fff",
+        borderRadius: "0px",
+        fontSize: "1rem",
+        padding: "8px 30px",
+        "&:hover":{
+            background:"black"
+        }
     }
 })
 
@@ -120,12 +148,58 @@ const ScrollAnimation = () => {
             </a>
             
             <Box sx={{textAlign:"center",my:7,display:{xs:"none",md:"block"}}}>
-             <Button className={classes.Button} variant="contained">View demo</Button>
-             <Button className={classes.Button} variant="contained">Download Source</Button>
+             <Button sx={{ background: "#334BF7",
+            color: "#fff",
+            borderRadius: "0px",
+            fontSize: "1rem",
+            fontWeight:"700",
+            width:"220px",
+            margin:"10px",
+            padding: "12px 0px",
+            "&:hover":{
+            background:"#334BF7"
+        }}}
+         variant="contained">View demo</Button>
+             <Button 
+             sx={{ background: "#334BF7",
+             color: "#fff",
+             borderRadius: "0px",
+             fontSize: "1rem",
+             fontWeight:"700",
+             margin:"10px",
+             width:"220px",
+             padding: "12px 0px",
+             "&:hover":{
+             background:"#334BF7"
+         }}}
+             variant="contained">Download Source</Button>
             </Box>
             <Box sx={{textAlign:"center",my:3,display:{xs:"block",md:"none"}}}>
-             <Button className={classes.Button} variant="contained">View demo</Button> <br />
-             <Button className={classes.Button} variant="contained">Download Source</Button>
+             <Button sx={{ background: "#334BF7",
+             color: "#fff",
+             borderRadius: "0px",
+             fontSize: "1rem",
+             fontWeight:"700",
+             margin:"10px",
+             width:"220px",
+             padding: "12px 0px",
+             "&:hover":{
+             background:"#334BF7"
+         }}}
+         variant="contained">View demo</Button> <br />
+             <Button 
+             sx={{ background: "#334BF7",
+             color: "#fff",
+             borderRadius: "0px",
+             fontSize: "1rem",
+             fontWeight:"700",
+             margin:"10px",
+             width:"220px",
+             padding: "12px 0px",
+             "&:hover":{
+             background:"#334BF7"
+           }}}
+             variant="contained">Download Source</Button>
             </Box>
 
             <Box>
@@ -223,6 +297,49 @@ const ScrollAnimation = () => {
                 
                 </Box>
                 </Box>
+            </Box>
+            <Box sx={{py:5,display:{md:"flex",xs:"block"}}}>
+                <Box sx={{mr:{md:2,xs:0}}}>
+                    <img style={{width:"100%",cursor:"pointer"}} src={`${serviceOne}`} alt="" />
+                    <Typography sx={{display:{md:"block",xs:"none"}}} variant="h6" gutterBottom component="div">
+                    <a className={classes.serviceLink} href="#">Layout with Reveal <br /> Animations and Content <br /> Preview</a>
+                    </Typography>
+                    <Typography sx={{display:{md:"none",xs:"block"}}} variant="h6" gutterBottom component="div">
+                    <a className={classes.serviceLink} href="#">Layout with Reveal Animations and Content Preview</a>
+                    
+                    </Typography>
+                </Box>
+                <Box sx={{mr:{md:2,xs:0},my:{md:0,xs:7}}}>
+                    <img style={{width:"100%",cursor:"pointer"}} src={`${serviceTwo}`} alt="" />
+                    <Typography sx={{display:{md:"block",xs:"none"}}} variant="h6" gutterBottom component="div">
+                    <a className={classes.serviceLink} href="#">Layout with Reveal <br /> Animations and Content <br /> Preview</a>
+                    </Typography>
+                    <Typography sx={{display:{md:"none",xs:"block"}}} variant="h6" gutterBottom component="div">
+                    <a className={classes.serviceLink} href="#">Layout with Reveal Animations and Content Preview</a>
+                    </Typography>
+                </Box>
+                <Box>
+                    <img style={{width:"100%",cursor:"pointer"}} src={`${serviceThree}`} alt="" />
+                    <Typography sx={{display:{md:"block",xs:"none"}}} variant="h6" gutterBottom component="div">
+                    <a className={classes.serviceLink} href="#">Layout with Reveal <br /> Animations and Content <br /> Preview</a>
+                    </Typography>
+                    <Typography sx={{display:{md:"none",xs:"block"}}} variant="h6" gutterBottom component="div">
+                    <a className={classes.serviceLink} href="#">Layout with Reveal Animations and Content Preview</a>
+                    </Typography>
+                </Box>
+            </Box>
+            <Box sx={{display:"flex",my:5}}>
+                <Box sx={{width:{md:"53%",xs:"100%"},background:"#f1f1f1",px:{md:4,xs:4},py:{md:7,xs:4},mr:5}}>
+                    <Typography variant="h6" gutterBottom component="div">
+                    Subscribe to Codrops
+                    </Typography>
+                    <Typography sx={{fontSize:"1rem",my:2}} variant="body1" gutterBottom>
+                    Stay up to date with the latest web design and development news and relevant updates from Codrops.
+                    </Typography>
+                    <input className={classes.input} type="text" placeholder="email address"/> <br /> <br />
+                    <Button className={classes.button}>Subscribe</Button>
+                </Box>
+                <Box sx={{width:"47%",background:"#f1f1f1",p:{md:7,xs:4},display:{md:'block',xs:"none"}}}></Box>
             </Box>
         </Box>
     );
