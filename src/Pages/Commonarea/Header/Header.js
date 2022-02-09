@@ -88,7 +88,7 @@ const Header = () => {
                     justifyContent: "center",margin:"12px 0px 25px 0px"}}>
             <TextField style={{marginTop:"-25px"}} id="standard-basic" label="Search on codrops" variant="standard" /> <span style={{marginLeft:"15px"}}><SearchIcon/></span>
             </Box>
-            <Box>
+            <Box sx={{mb:5}}>
                 <span className={classes.details}>Tw</span>
                 <span className={classes.details}>Fb</span>
                 <span className={classes.details}>Gh</span>
